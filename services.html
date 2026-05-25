@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="services.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="cover-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/fintech.webp'); background-size: cover; background-position: center;">
+  <div class="cover-content">
+    <h1>Our Services</h1>
+    <p>Empower Your Journey with Expert Solutions</p>
+  </div>
+</section>
+
+<section class="services">
+  <h1 data-aos="fade-up">Our Services</h1>
+
+  <div class="service-boxes">
+    <div class="service" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-chalkboard-user"></i>
+      <h2>Live Training</h2>
+      <p>Interactive online classes with mentors.</p>
+    </div>
+
+    <div class="service" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-solid fa-briefcase"></i>
+      <h2>Placement Support</h2>
+      <p>Career guidance and interview preparation.</p>
+    </div>
+
+    <div class="service" data-aos="fade-up" data-aos-delay="300">
+      <i class="fa-solid fa-laptop-file"></i>
+      <h2>Project Guidance</h2>
+      <p>Real-world projects and portfolio building.</p>
+    </div>
+    <div class="service" data-aos="fade-up" data-aos-delay="400">
+      <i class="fa-solid fa-code-commit"></i>
+      <h2>Code Review</h2>
+      <p>Get your code reviewed by industry experts.</p>
+    </div>
+
+    <div class="service" data-aos="fade-up" data-aos-delay="500">
+      <i class="fa-solid fa-file-lines"></i>
+      <h2>Resume Building</h2>
+      <p>Professional help to craft the perfect resume.</p>
+    </div>
+
+    <div class="service" data-aos="fade-up" data-aos-delay="600">
+      <i class="fa-solid fa-person-chalkboard"></i>
+      <h2>1-on-1 Mentorship</h2>
+      <p>Personalized guidance for your career growth.</p>
+    </div>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="benefits-content" data-aos="fade-right">
+    <h2>Why Invest in Your Career With Us?</h2>
+    <p>Our comprehensive services are designed to give you a competitive edge in the tech industry. From personalized learning to career support, we ensure you have everything needed to succeed.</p>
+    <ul class="benefits-list">
+      <li data-aos="fade-left" data-aos-delay="100"><i class="fa-solid fa-check"></i> Industry-vetted curriculum</li>
+      <li data-aos="fade-left" data-aos-delay="200"><i class="fa-solid fa-check"></i> Dedicated career coaches</li>
+      <li data-aos="fade-left" data-aos-delay="300"><i class="fa-solid fa-check"></i> Lifetime access to resources</li>
+      <li data-aos="fade-left" data-aos-delay="400"><i class="fa-solid fa-check"></i> Exclusive alumni network</li>
+    </ul>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <h2 data-aos="fade-up">How It Works</h2>
+  <div class="steps-container">
+    <div class="step" data-aos="zoom-in" data-aos-delay="200">
+      <div class="step-number">1</div>
+      <h3>Enroll</h3>
+      <p>Choose your preferred service or course and register online.</p>
+    </div>
+    <div class="step" data-aos="zoom-in" data-aos-delay="400">
+      <div class="step-number">2</div>
+      <h3>Learn</h3>
+      <p>Attend live sessions, watch videos, and complete assignments.</p>
+    </div>
+    <div class="step" data-aos="zoom-in" data-aos-delay="600">
+      <div class="step-number">3</div>
+      <h3>Get Certified</h3>
+      <p>Receive your certificate and get placement assistance.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+fetch("navbar.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    offset: 100,
+  });
+</script>
+
+</body>
+</html>

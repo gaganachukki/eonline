@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="courses.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="cover-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/k1.webp'); background-size: cover; background-position: center;">
+  <div class="cover-content">
+    <h1>Our Courses</h1>
+    <p>Master In-Demand Skills with Expert Instructors</p>
+  </div>
+</section>
+
+<section class="categories-section">
+  <h2 data-aos="fade-up">Browse by Categories</h2>
+  <div class="category-grid">
+    <div class="category-box" data-aos="flip-left" data-aos-delay="100">
+      <i class="fa-solid fa-code"></i>
+      <h3>Web Development</h3>
+    </div>
+    <div class="category-box" data-aos="flip-left" data-aos-delay="200">
+      <i class="fa-solid fa-mobile-screen"></i>
+      <h3>Mobile Apps</h3>
+    </div>
+    <div class="category-box" data-aos="flip-left" data-aos-delay="300">
+      <i class="fa-solid fa-database"></i>
+      <h3>Data Science</h3>
+    </div>
+    <div class="category-box" data-aos="flip-left" data-aos-delay="400">
+      <i class="fa-solid fa-robot"></i>
+      <h3>AI & ML</h3>
+    </div>
+  </div>
+</section>
+
+<section class="courses">
+  <h1 data-aos="fade-up">Popular Courses</h1>
+
+  <div class="course-container">
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card-img-wrap"><img src="assets/cyber.webp" class="course-img" alt="Python"></div>
+      <h3>Python Development</h3>
+      <p>Master Python from basics to advanced.</p>
+    </div>
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-img-wrap"><img src="assets/fintech.webp" class="course-img" alt="JS"></div>
+      <h3>JavaScript Mastery</h3>
+      <p>Build interactive websites and applications.</p>
+    </div>
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card-img-wrap"><img src="assets/digitalcustody.webp" class="course-img" alt="AI"></div>
+      <h3>AI & Machine Learning</h3>
+      <p>Learn artificial intelligence concepts.</p>
+    </div>
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="card-img-wrap"><img src="assets/hubmarket.webp" class="course-img" alt="React"></div>
+      <h3>React Front-End</h3>
+      <p>Build dynamic user interfaces with React.</p>
+    </div>
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="500">
+      <div class="card-img-wrap"><img src="assets/contact_hero.webp" class="course-img" alt="Mobile"></div>
+      <h3>Mobile App Dev</h3>
+      <p>Create iOS and Android apps with Flutter.</p>
+    </div>
+
+    <div class="course-card" data-aos="zoom-in" data-aos-delay="600">
+      <div class="card-img-wrap"><img src="assets/cybero1.webp" class="course-img" alt="Data Science"></div>
+      <h3>Data Science</h3>
+      <p>Analyze data and build predictive models.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq">
+  <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+      <h4>Do I get a certificate after completion?</h4>
+      <p>Yes, you will receive an industry-recognized certificate upon successfully completing any of our courses.</p>
+    </div>
+    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+      <h4>Are the classes live or pre-recorded?</h4>
+      <p>We offer a mix of both! Most courses feature live weekend sessions combined with pre-recorded weekday materials.</p>
+    </div>
+    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+      <h4>Is there any refund policy?</h4>
+      <p>We offer a 7-day money-back guarantee if you are not satisfied with the course content.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+fetch("navbar.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    offset: 100,
+  });
+</script>
+
+</body>
+</html>

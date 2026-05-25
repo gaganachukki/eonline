@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="blog.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="cover-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/digitalcustody.webp'); background-size: cover; background-position: center;">
+  <div class="cover-content">
+    <h1>Latest Blogs</h1>
+    <p>Insights, Tips, and Industry Updates</p>
+  </div>
+</section>
+
+<section class="blog">
+  <h1 data-aos="fade-up">Latest Blogs</h1>
+
+  <div class="blog-container">
+
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="blog-img-wrap"><img src="assets/cyber.webp" alt="Blog 1"></div>
+      <div class="blog-content">
+        <h3>Future of AI Education</h3>
+        <p>Explore how AI is transforming online learning.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="blog-img-wrap"><img src="assets/fintech.webp" alt="Blog 2"></div>
+      <div class="blog-content">
+        <h3>Top Programming Skills</h3>
+        <p>Learn trending development skills in 2026.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="blog-img-wrap"><img src="assets/digitalcustody.webp" alt="Blog 3"></div>
+      <div class="blog-content">
+        <h3>Getting Started with Coding</h3>
+        <p>A complete beginner's guide to writing your first line of code.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="blog-img-wrap"><img src="assets/hubmarket.webp" alt="Blog 4"></div>
+      <div class="blog-content">
+        <h3>Remote Work Productivity</h3>
+        <p>Best tools and practices for remote developers.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="popular-tags">
+  <h2 data-aos="fade-up">Popular Tags</h2>
+  <div class="tags-container" data-aos="zoom-in" data-aos-delay="200">
+    <span class="tag-item">#Python</span>
+    <span class="tag-item">#ReactJS</span>
+    <span class="tag-item">#WebDev</span>
+    <span class="tag-item">#MachineLearning</span>
+    <span class="tag-item">#CareerTips</span>
+    <span class="tag-item">#Productivity</span>
+    <span class="tag-item">#RemoteWork</span>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="newsletter-content" data-aos="zoom-in">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest tutorials, tips, and updates straight to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+fetch("navbar.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    offset: 100,
+  });
+</script>
+
+</body>
+</html>

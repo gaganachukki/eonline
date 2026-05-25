@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stackly Academy</title>
+
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <span class="tag">NEXT GENERATION LEARNING</span>
+
+      <h1 data-aos="fade-up" data-aos-delay="200">Learn Anytime, <br> Anywhere with Expert Instructors</h1>
+
+      <p data-aos="fade-up" data-aos-delay="400">
+        Access world-class courses, live interactive sessions, and industry certifications.
+        Transform your career with hands-on projects and personalized mentorship.
+      </p>
+
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+        <button class="btn-outline">Explore Courses</button>
+        <button class="btn-primary">Start Learning Now</button>
+      </div>
+
+      <div class="students" data-aos="zoom-in" data-aos-delay="800">
+        <img src="assets/k1.webp" alt="Student 1">
+        <img src="assets/k3.webp" alt="Student 2">
+        <img src="assets/cybero1.webp" alt="Student 3">
+        <img src="assets/digitalcustody.webp" alt="Student 4">
+
+        <div>
+          <h3>10,000+</h3>
+          <span>Active Learners</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-video"></i>
+      <h3>Live Classes</h3>
+      <p>Interactive online learning sessions.</p>
+    </div>
+
+    <div class="feature-box" data-aos="fade-up" data-aos-delay="300">
+      <i class="fa-solid fa-certificate"></i>
+      <h3>Certification</h3>
+      <p>Industry-recognized course completion certificates.</p>
+    </div>
+
+    <div class="feature-box" data-aos="fade-up" data-aos-delay="500">
+      <i class="fa-solid fa-user-graduate"></i>
+      <h3>Expert Mentors</h3>
+      <p>Learn from professional instructors.</p>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <h2 data-aos="fade-up">Why Choose Stackly?</h2>
+    <div class="choose-grid">
+      <div class="choose-item" data-aos="flip-left" data-aos-delay="200">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h4>Interactive Learning</h4>
+        <p>Learn by doing with our built-in coding environments and real-time feedback.</p>
+      </div>
+      <div class="choose-item" data-aos="flip-left" data-aos-delay="400">
+        <i class="fa-solid fa-users"></i>
+        <h4>Community Support</h4>
+        <p>Join a global community of learners and mentors to help you grow.</p>
+      </div>
+      <div class="choose-item" data-aos="flip-left" data-aos-delay="600">
+        <i class="fa-solid fa-briefcase"></i>
+        <h4>Career Services</h4>
+        <p>Get resume reviews, interview prep, and exclusive job board access.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Path -->
+  <section class="learning-path">
+    <h2 data-aos="fade-up">Your Learning Path</h2>
+    <div class="path-container">
+      <div class="path-step" data-aos="fade-right" data-aos-delay="100">
+        <div class="path-icon"><i class="fa-solid fa-1"></i></div>
+        <h4>Learn the Basics</h4>
+        <p>Start from scratch with interactive tutorials.</p>
+      </div>
+      <div class="path-line" data-aos="zoom-in" data-aos-delay="200"></div>
+      <div class="path-step" data-aos="fade-right" data-aos-delay="300">
+        <div class="path-icon"><i class="fa-solid fa-2"></i></div>
+        <h4>Build Projects</h4>
+        <p>Apply your knowledge to real-world scenarios.</p>
+      </div>
+      <div class="path-line" data-aos="zoom-in" data-aos-delay="400"></div>
+      <div class="path-step" data-aos="fade-right" data-aos-delay="500">
+        <div class="path-icon"><i class="fa-solid fa-3"></i></div>
+        <h4>Get Certified</h4>
+        <p>Earn an industry-recognized certificate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2 data-aos="fade-up">What Our Students Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="200">
+        <p>"Stackly completely transformed my career. I went from a complete beginner to a full-stack developer in just 6 months!"</p>
+        <div class="user-info">
+          <img src="assets/k1.webp" alt="Sarah">
+          <div>
+            <h4>Sarah Jenkins</h4>
+            <span>Software Engineer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="zoom-in-up" data-aos-delay="400">
+        <p>"The mentorship program is incredible. Having an industry expert guide me made all the difference in my learning journey."</p>
+        <div class="user-info">
+          <img src="assets/k3.webp" alt="Michael">
+          <div>
+            <h4>Michael Thompson</h4>
+            <span>Data Analyst</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      offset: 100,
+    });
+  </script>
+</body>
+</html>
