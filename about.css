@@ -7,6 +7,7 @@
   background-position:center;
   background-attachment:fixed;
   position:relative;
+  padding-top: 120px;
 }
 
 .cover-content{
@@ -254,5 +255,27 @@
     width: 80%;
     margin-left: 60px;
     text-align: left !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover-hero {
+    padding: 100px 5% 30px;
+  }
+  .cover-content h1 {
+    font-size: 36px;
+  }
+  .about-content h1 {
+    font-size: 36px;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .vision-mission {
+    flex-direction: column;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 }

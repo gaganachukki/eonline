@@ -11,7 +11,7 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:50px 8%;
+  padding:120px 8% 50px;
   position:relative;
 }
 
@@ -336,5 +336,24 @@ body{
     width: 4px;
     height: 50px;
     min-height: 50px;
+  }
+  
+  .hero {
+    padding: 100px 5% 40px;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .why-choose-us h2, .learning-path h2, .testimonials h2 {
+    font-size: 32px;
+  }
+  .students {
+    flex-wrap: wrap;
   }
 }

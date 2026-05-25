@@ -102,3 +102,20 @@
   border-top:1px solid rgba(255,255,255,0.2);
   padding-top:20px;
 }
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-col:last-child {
+    margin-left: 0;
+  }
+  .contact-info-list li {
+    justify-content: center;
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+}

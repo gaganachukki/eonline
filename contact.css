@@ -7,6 +7,7 @@
   background-position:center;
   background-attachment:fixed;
   position:relative;
+  padding-top: 120px;
 }
 
 .cover-content{
@@ -217,4 +218,22 @@ button:hover {
   color: white;
   transform: translateY(-10px) rotate(360deg);
   box-shadow: 0 15px 30px rgba(59, 69, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .cover-hero {
+    padding: 100px 5% 30px;
+  }
+  .cover-content h1 {
+    font-size: 36px;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-info h2, .contact-box h1 {
+    font-size: 32px;
+  }
+  .social-links {
+    flex-wrap: wrap;
+  }
 }

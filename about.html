@@ -23,11 +23,6 @@
 
 <section class="about-section">
   <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
-    <h1>About Stackly</h1>
-    <p>
-      Stackly Academy provides modern online education with
-      AI-powered learning solutions and practical skill development.
-    </p>
 
     <div class="stats">
       <div data-aos="zoom-in" data-aos-delay="200">
@@ -114,6 +109,25 @@ fetch("navbar.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("navbar").innerHTML = data;
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+  const menuIcon = document.querySelector(".menu-icon");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuIcon && navLinks) {
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active-menu");
+    });
+  }
+  const closeIcon = document.querySelector(".close-icon");
+  if (closeIcon && navLinks) {
+    closeIcon.addEventListener("click", () => {
+      navLinks.classList.remove("active-menu");
+    });
+  }
 });
 
 fetch("footer.html")

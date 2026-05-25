@@ -23,7 +23,6 @@
 </section>
 
 <section class="services">
-  <h1 data-aos="fade-up">Our Services</h1>
 
   <div class="service-boxes">
     <div class="service" data-aos="fade-up" data-aos-delay="100">
@@ -104,6 +103,25 @@ fetch("navbar.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("navbar").innerHTML = data;
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+  const menuIcon = document.querySelector(".menu-icon");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuIcon && navLinks) {
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active-menu");
+    });
+  }
+  const closeIcon = document.querySelector(".close-icon");
+  if (closeIcon && navLinks) {
+    closeIcon.addEventListener("click", () => {
+      navLinks.classList.remove("active-menu");
+    });
+  }
 });
 
 fetch("footer.html")

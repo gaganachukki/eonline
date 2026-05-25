@@ -7,6 +7,7 @@
   background-position:center;
   background-attachment:fixed;
   position:relative;
+  padding-top: 120px;
 }
 
 .cover-content{
@@ -177,4 +178,16 @@
 
 .category-box h3 {
   font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .cover-hero {
+    padding: 100px 5% 30px;
+  }
+  .cover-content h1 {
+    font-size: 36px;
+  }
+  .courses h1, .categories-section h2, .faq h2 {
+    font-size: 32px;
+  }
 }

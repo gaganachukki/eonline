@@ -7,6 +7,7 @@
   background-position:center;
   background-attachment:fixed;
   position:relative;
+  padding-top: 120px;
 }
 
 .cover-content{
@@ -183,4 +184,19 @@
 .benefits-list li i {
   color: #00d4ff;
   font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .cover-hero {
+    padding: 100px 5% 30px;
+  }
+  .cover-content h1 {
+    font-size: 36px;
+  }
+  .services h1, .how-it-works h2, .benefits-content h2 {
+    font-size: 32px;
+  }
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
 }
