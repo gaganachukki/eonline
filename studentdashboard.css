@@ -52,6 +52,8 @@ body {
 .sidebar-nav {
   list-style: none;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-nav li {
@@ -86,6 +88,27 @@ body {
   width: 20px;
   text-align: center;
   font-size: 16px;
+}
+
+.sidebar-nav li.logout-item {
+  margin-top: auto;
+}
+
+.sidebar-nav a.logout-btn {
+  background: #00BCD4;
+  color: #ffffff;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.sidebar-nav a.logout-btn:hover {
+  background: #0097A7;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+}
+
+.sidebar-nav a.logout-btn i {
+  color: #ffffff;
 }
 
 .topbar-user {
@@ -723,6 +746,12 @@ body {
   }
   .sidebar-nav a i {
     display: none;
+  }
+  .sidebar-nav a.logout-btn {
+    background: #00BCD4 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
+    margin-top: 15px;
   }
   .sidebar-close {
     display: flex;

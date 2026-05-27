@@ -102,6 +102,83 @@
   </div>
 </section>
 
+<!-- Learning Outcomes -->
+<section class="learning-outcomes">
+  <div class="outcomes-container">
+    <div class="outcomes-text" data-aos="fade-right">
+      <h2>What You Will Achieve</h2>
+      <p>Our curriculum is designed to transform you from a beginner into an industry-ready professional. Here is what you can expect after completing our core programs.</p>
+      <ul class="outcomes-list">
+        <li><i class="fa-solid fa-circle-check"></i> Build a portfolio of 10+ real-world projects</li>
+        <li><i class="fa-solid fa-circle-check"></i> Master the latest industry tools and frameworks</li>
+        <li><i class="fa-solid fa-circle-check"></i> Earn verified certificates to boost your resume</li>
+        <li><i class="fa-solid fa-circle-check"></i> Gain access to our exclusive global alumni network</li>
+      </ul>
+    </div>
+    <div class="outcomes-image" data-aos="fade-left">
+      <img src="assets/collaboration.webp" alt="Students collaborating">
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Plans -->
+<section class="pricing-plans">
+  <h2 data-aos="fade-up">Choose Your Learning Path</h2>
+  <div class="pricing-grid">
+    <!-- Free Plan -->
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="pricing-header">
+        <h3>Explorer</h3>
+        <div class="price">Free</div>
+        <p>For absolute beginners</p>
+      </div>
+      <ul class="pricing-features">
+        <li><i class="fa-solid fa-check"></i> Access to 20+ basic courses</li>
+        <li><i class="fa-solid fa-check"></i> Community forum support</li>
+        <li><i class="fa-solid fa-check"></i> Basic coding exercises</li>
+        <li class="disabled"><i class="fa-solid fa-xmark"></i> Verified certificates</li>
+        <li class="disabled"><i class="fa-solid fa-xmark"></i> 1-on-1 mentorship</li>
+      </ul>
+      <a href="404.html" class="pricing-btn outline">Start Free</a>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="200">
+      <div class="popular-badge">Most Popular</div>
+      <div class="pricing-header">
+        <h3>Pro Learner</h3>
+        <div class="price">₹1,999<span>/mo</span></div>
+        <p>For serious developers</p>
+      </div>
+      <ul class="pricing-features">
+        <li><i class="fa-solid fa-check"></i> Unlimited access to all courses</li>
+        <li><i class="fa-solid fa-check"></i> Priority community support</li>
+        <li><i class="fa-solid fa-check"></i> Advanced capstone projects</li>
+        <li><i class="fa-solid fa-check"></i> Verified certificates</li>
+        <li class="disabled"><i class="fa-solid fa-xmark"></i> 1-on-1 mentorship</li>
+      </ul>
+      <a href="404.html" class="pricing-btn">Get Pro</a>
+    </div>
+
+    <!-- Bootcamp Plan -->
+    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="pricing-header">
+        <h3>Bootcamp</h3>
+        <div class="price">₹19,999<span>/course</span></div>
+        <p>For career changers</p>
+      </div>
+      <ul class="pricing-features">
+        <li><i class="fa-solid fa-check"></i> Everything in Pro plan</li>
+        <li><i class="fa-solid fa-check"></i> Dedicated career coach</li>
+        <li><i class="fa-solid fa-check"></i> Weekly 1-on-1 mentorship</li>
+        <li><i class="fa-solid fa-check"></i> Resume &amp; interview prep</li>
+        <li><i class="fa-solid fa-check"></i> Guaranteed interview calls</li>
+      </ul>
+      <a href="404.html" class="pricing-btn outline">Apply Now</a>
+    </div>
+  </div>
+</section>
+
 <section class="faq">
   <h2 data-aos="fade-up">Frequently Asked Questions</h2>
   <div class="faq-list">
@@ -152,6 +229,14 @@ fetch("footer.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("footer").innerHTML = data;
+  let currentPath = window.location.pathname.split("/").pop();
+  if (currentPath === "" || currentPath === "/") currentPath = "index.html";
+  const quickLinks = document.querySelectorAll('.footer-col:nth-child(2) li a');
+  quickLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.parentElement.style.display = 'none';
+    }
+  });
 });
 </script>
 

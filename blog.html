@@ -121,6 +121,14 @@ fetch("footer.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("footer").innerHTML = data;
+  let currentPath = window.location.pathname.split("/").pop();
+  if (currentPath === "" || currentPath === "/") currentPath = "index.html";
+  const quickLinks = document.querySelectorAll('.footer-col:nth-child(2) li a');
+  quickLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.parentElement.style.display = 'none';
+    }
+  });
 });
 </script>
 

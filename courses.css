@@ -174,10 +174,10 @@
 }
 
 .category-box:hover {
-  background: #3b45ff;
+  background: #00BCD4;
   color: white;
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(59, 69, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 188, 212, 0.2);
 }
 
 .category-box i {
@@ -194,6 +194,185 @@
 
 .category-box h3 {
   font-size: 20px;
+}
+
+/* ========== Learning Outcomes ========== */
+.learning-outcomes {
+  padding: 80px 8%;
+  background: white;
+}
+.outcomes-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.outcomes-text {
+  flex: 1;
+}
+.outcomes-text h2 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.outcomes-text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.outcomes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.outcomes-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+.outcomes-list i {
+  color: #00BCD4;
+  font-size: 24px;
+}
+.outcomes-image {
+  flex: 1;
+}
+.outcomes-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* ========== Pricing Plans ========== */
+.pricing-plans {
+  padding: 80px 8%;
+  background: #f4f7ff;
+  text-align: center;
+}
+.pricing-plans h2 {
+  font-size: 45px;
+  color: #333;
+  margin-bottom: 50px;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.pricing-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.pricing-card.popular {
+  border: 2px solid #00BCD4;
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,188,212,0.15);
+}
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00BCD4;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.pricing-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+.pricing-header h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.pricing-header .price {
+  font-size: 45px;
+  font-weight: 800;
+  color: #00BCD4;
+  margin-bottom: 10px;
+}
+.pricing-header .price span {
+  font-size: 16px;
+  color: #888;
+  font-weight: normal;
+}
+.pricing-header p {
+  color: #666;
+}
+.pricing-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+  flex: 1;
+}
+.pricing-features li {
+  margin-bottom: 15px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-features i {
+  color: #00BCD4;
+  font-size: 18px;
+}
+.pricing-features li.disabled {
+  color: #aaa;
+}
+.pricing-features li.disabled i {
+  color: #aaa;
+}
+.pricing-btn {
+  display: block;
+  padding: 15px;
+  background: #00BCD4;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.pricing-btn:hover {
+  background: #0097A7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+.pricing-btn.outline {
+  background: transparent;
+  color: #00BCD4;
+  border: 2px solid #00BCD4;
+}
+.pricing-btn.outline:hover {
+  background: #00BCD4;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -236,5 +415,23 @@
   }
   .faq-item p {
     font-size: 14px;
+  }
+  .outcomes-container {
+    flex-direction: column;
+  }
+  .outcomes-text h2 {
+    font-size: 28px;
+  }
+  .pricing-plans {
+    padding: 50px 5%;
+  }
+  .pricing-plans h2 {
+    font-size: 28px;
+  }
+  .pricing-card.popular {
+    transform: none;
+  }
+  .pricing-card.popular:hover {
+    transform: translateY(-10px);
   }
 }

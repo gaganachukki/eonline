@@ -302,14 +302,14 @@ body{
   align-items: center;
   margin: 0 auto 20px;
   font-size: 30px;
-  color: #3b45ff;
+  color: #00BCD4;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(59, 69, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.2);
 }
 
 .path-step:hover .path-icon {
   transform: scale(1.1) rotate(10deg);
-  background: #3b45ff;
+  background: #00BCD4;
   color: white;
 }
 
@@ -550,7 +550,7 @@ body{
 }
 
 .preview-badge.new {
-  background: #7c3aed;
+  background: #10B981;
 }
 
 .preview-body {
@@ -741,7 +741,185 @@ body{
   }
 }
 
-@media (max-width: 480px) {
+/* ========== Career Paths ========== */
+.career-paths {
+  padding: 80px 8%;
+  background: white;
+  text-align: center;
+}
+.career-paths h2 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.path-sub {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.career-card {
+  background: #f4f7ff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+.career-card:hover {
+  transform: translateY(-10px);
+  border-color: #00BCD4;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.career-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #00BCD4;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.career-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.career-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.avg-salary {
+  display: block;
+  font-weight: 600;
+  color: #0097A7;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.career-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+.career-link:hover {
+  color: #00BCD4;
+  gap: 12px;
+}
+
+/* ========== Upcoming Events ========== */
+.upcoming-events {
+  padding: 80px 8%;
+  background: #0f172a;
+}
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.events-header h2 {
+  font-size: 40px;
+  color: white;
+}
+.view-all-btn {
+  padding: 12px 25px;
+  border: 2px solid rgba(255,255,255,0.2);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.view-all-btn:hover {
+  background: white;
+  color: #0f172a;
+}
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.event-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+.event-item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(10px);
+}
+.event-date {
+  background: #00BCD4;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 90px;
+}
+.event-date .day {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+.event-date .month {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.event-details {
+  flex: 1;
+  min-width: 250px;
+}
+.event-details h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.event-details p {
+  color: #b0b0b0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.event-btn {
+  padding: 12px 30px;
+  background: white;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.event-btn:hover {
+  background: #00BCD4;
+  color: white;
+}
+
+@media (max-width: 768px) {
   .hero-content h1 {
     font-size: 28px;
   }
@@ -750,5 +928,20 @@ body{
   }
   .students h3 {
     font-size: 16px;
+  }
+  .career-paths, .upcoming-events {
+    padding: 50px 5%;
+  }
+  .career-paths h2, .events-header h2 {
+    font-size: 30px;
+  }
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .event-btn {
+    width: 100%;
+    text-align: center;
   }
 }

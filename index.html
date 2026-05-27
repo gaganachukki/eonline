@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="index.css">
 
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -68,7 +67,7 @@
     </div>
 
     <div class="feature-box" data-aos="fade-up" data-aos-delay="500">
-      <img src="assets/instructor-1.webp" alt="Expert Mentors" class="card-img">
+      <img src="assets/a2.webp" alt="Expert Mentors" class="card-img">
       <div class="card-content">
         <h3>Expert Mentors</h3>
         <p>Learn from professional instructors.</p>
@@ -239,6 +238,67 @@
     </div>
   </section>
 
+  <!-- Career Paths -->
+  <section class="career-paths">
+    <h2 data-aos="fade-up">Find Your Perfect Career Path</h2>
+    <p class="path-sub" data-aos="fade-up" data-aos-delay="100">Curated tracks designed to take you from beginner to job-ready professional</p>
+    <div class="career-grid">
+      <div class="career-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="career-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Frontend Developer</h3>
+        <p>Master HTML, CSS, JavaScript, and React to build stunning user interfaces.</p>
+        <span class="avg-salary">Avg. Salary: ₹6 - 12 LPA</span>
+        <a href="courses.html" class="career-link">View Path <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="career-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="career-icon"><i class="fa-solid fa-server"></i></div>
+        <h3>Backend Developer</h3>
+        <p>Build scalable APIs, manage databases, and master Node.js or Python.</p>
+        <span class="avg-salary">Avg. Salary: ₹8 - 15 LPA</span>
+        <a href="courses.html" class="career-link">View Path <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="career-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="career-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Data Scientist</h3>
+        <p>Analyze complex data, build predictive models using Machine Learning.</p>
+        <span class="avg-salary">Avg. Salary: ₹10 - 20 LPA</span>
+        <a href="courses.html" class="career-link">View Path <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="upcoming-events">
+    <div class="events-header">
+      <h2 data-aos="fade-right">Upcoming Live Workshops</h2>
+      <a href="404.html" class="view-all-btn" data-aos="fade-left">View All Events</a>
+    </div>
+    <div class="events-list">
+      <div class="event-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="event-date">
+          <span class="day">15</span>
+          <span class="month">JUN</span>
+        </div>
+        <div class="event-details">
+          <h3>Mastering React Hooks in 2026</h3>
+          <p><i class="fa-solid fa-clock"></i> 6:00 PM - 8:00 PM (IST) &nbsp;|&nbsp; <i class="fa-solid fa-video"></i> Online Masterclass</p>
+        </div>
+        <a href="404.html" class="event-btn">Register Free</a>
+      </div>
+      <div class="event-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-date">
+          <span class="day">22</span>
+          <span class="month">JUN</span>
+        </div>
+        <div class="event-details">
+          <h3>Getting Started with AWS Deployment</h3>
+          <p><i class="fa-solid fa-clock"></i> 5:00 PM - 7:00 PM (IST) &nbsp;|&nbsp; <i class="fa-solid fa-video"></i> Live Webinar</p>
+        </div>
+        <a href="404.html" class="event-btn">Register Free</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Newsletter CTA -->
   <section class="newsletter-cta"  data-aos="zoom-in">
     <div class="newsletter-content">
@@ -286,6 +346,14 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("footer").innerHTML = data;
+        let currentPath = window.location.pathname.split("/").pop();
+        if (currentPath === "" || currentPath === "/") currentPath = "index.html";
+        const quickLinks = document.querySelectorAll('.footer-col:nth-child(2) li a');
+        quickLinks.forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.parentElement.style.display = 'none';
+          }
+        });
       });
   </script>
 

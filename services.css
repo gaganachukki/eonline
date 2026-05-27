@@ -80,6 +80,25 @@
   transform: scale(1.2);
 }
 
+/* Unique accent colors for each service box */
+.service:nth-child(1) i { color: #00BCD4; }
+.service:nth-child(2) i { color: #FF6B6B; }
+.service:nth-child(3) i { color: #4CAF50; }
+.service:nth-child(4) i { color: #FF9800; }
+.service:nth-child(5) i { color: #9C27B0; }
+.service:nth-child(6) i { color: #2196F3; }
+.service:nth-child(7) i { color: #E91E63; }
+.service:nth-child(8) i { color: #009688; }
+
+.service:nth-child(1):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(2):hover { border-top: 4px solid #FF6B6B; }
+.service:nth-child(3):hover { border-top: 4px solid #4CAF50; }
+.service:nth-child(4):hover { border-top: 4px solid #FF9800; }
+.service:nth-child(5):hover { border-top: 4px solid #9C27B0; }
+.service:nth-child(6):hover { border-top: 4px solid #2196F3; }
+.service:nth-child(7):hover { border-top: 4px solid #E91E63; }
+.service:nth-child(8):hover { border-top: 4px solid #009688; }
+
 /* How It Works Section */
 .how-it-works {
   padding: 60px 8%;
@@ -142,7 +161,7 @@
 /* Benefits Section */
 .benefits-section {
   padding: 60px 8%;
-  background: #3b45ff;
+  background: #00BCD4;
   color: white;
   display: flex;
   justify-content: center;
@@ -176,23 +195,112 @@
 
 .benefits-list li {
   font-size: 18px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.25);
   padding: 20px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .benefits-list li:hover {
   transform: translateX(10px);
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.4);
 }
 
 .benefits-list li i {
-  color: #00d4ff;
+  color: white;
   font-size: 20px;
+}
+
+/* Service Impact */
+.service-impact {
+  padding: 60px 8%;
+  background: #f4f7ff;
+  text-align: center;
+}
+
+.service-impact h2 {
+  font-size: 45px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.impact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.impact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  min-width: 250px;
+  flex: 1;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px);
+}
+
+.impact-card h3 {
+  font-size: 50px;
+  color: #00BCD4;
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  font-size: 18px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Enterprise Solutions */
+.enterprise-solutions {
+  padding: 80px 8%;
+  background: #00BCD4;
+  color: white;
+  text-align: center;
+}
+
+.enterprise-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.enterprise-content h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.enterprise-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.enterprise-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #333333;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.enterprise-btn:hover {
+  background: #111111;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -209,7 +317,7 @@
   .services {
     padding: 40px 5%;
   }
-  .services h1, .how-it-works h2, .benefits-content h2 {
+  .services h1, .how-it-works h2, .benefits-content h2, .service-impact h2, .enterprise-content h2 {
     font-size: 28px;
   }
   .service-boxes {
@@ -237,5 +345,14 @@
   .benefits-list li {
     font-size: 16px;
     padding: 15px;
+  }
+  .service-impact, .enterprise-solutions {
+    padding: 40px 5%;
+  }
+  .impact-card {
+    padding: 25px;
+  }
+  .impact-card h3 {
+    font-size: 40px;
   }
 }

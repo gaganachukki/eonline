@@ -123,7 +123,7 @@
 
 .vm-box h3 {
   font-size: 28px;
-  color: #3b45ff;
+  color: #00BCD4;
   margin-bottom: 20px;
 }
 
@@ -230,16 +230,19 @@
 .timeline-year {
   width: 80px;
   height: 80px;
-  background: #3b45ff;
+  background: #00BCD4;
   color: white;
   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   font-weight: bold;
   z-index: 2;
-  box-shadow: 0 0 0 5px white, 0 5px 15px rgba(59, 69, 255, 0.4);
+  box-shadow: 0 0 0 5px white, 0 5px 15px rgba(0, 188, 212, 0.4);
 }
 
 .timeline-content {
@@ -289,6 +292,7 @@
     height: 60px;
     font-size: 16px;
     z-index: 2;
+    left: 40px;
   }
   .timeline-content {
     width: calc(100% - 70px);

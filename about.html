@@ -166,6 +166,16 @@
       <h3>Continuous Growth</h3>
       <p>Learning never stops. We foster a culture where mentors and students alike push their boundaries and grow together every day.</p>
     </div>
+    <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+      <div class="value-icon"><i class="fa-solid fa-users"></i></div>
+      <h3>Community Driven</h3>
+      <p>We build strong networks of peers, mentors, and industry experts, encouraging collaboration and lifelong professional relationships.</p>
+    </div>
+    <div class="value-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="value-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h3>Career Focused</h3>
+      <p>Our end goal is your success. We design our programs backward from industry requirements to ensure you are always job-ready.</p>
+    </div>
   </div>
 </section>
 
@@ -255,6 +265,14 @@ fetch("footer.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("footer").innerHTML = data;
+  let currentPath = window.location.pathname.split("/").pop();
+  if (currentPath === "" || currentPath === "/") currentPath = "index.html";
+  const quickLinks = document.querySelectorAll('.footer-col:nth-child(2) li a');
+  quickLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.parentElement.style.display = 'none';
+    }
+  });
 });
 </script>
 
