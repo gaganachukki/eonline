@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly Academy – Admin Dashboard</title>
+  <meta name="description" content="Admin control panel for Stackly Academy. Manage students, courses, instructors and platform analytics.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="sidebar-logo">
+      <img src="assets/logo.webp" alt="Stackly Logo">
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="#" class="active" data-section="dashboard"><i class="fa-solid fa-gauge-high"></i> Dashboard</a></li>
+      <li><a href="#" data-section="students"><i class="fa-solid fa-users"></i> Students</a></li>
+      <li><a href="#" data-section="instructors"><i class="fa-solid fa-chalkboard-user"></i> Instructors</a></li>
+      <li><a href="#" data-section="courses"><i class="fa-solid fa-book"></i> Courses</a></li>
+      <li><a href="#" data-section="analytics"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+      <li><a href="#" data-section="settings"><i class="fa-solid fa-shield-halved"></i> Settings</a></li>
+      <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+    </ul>
+
+
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <div class="mobile-header">
+      <img src="assets/logo.webp" alt="Stackly Logo">
+      <div class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <h1 id="page-title">Admin Dashboard</h1>
+        <p id="page-subtitle">Platform overview and management tools</p>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="Search students, courses..." id="admin-search">
+        </div>
+        <div class="topbar-icon">
+          <i class="fa-solid fa-bell"></i>
+          <span class="badge">7</span>
+        </div>
+        <div class="topbar-icon">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="badge">4</span>
+        </div>
+        <div class="topbar-user" id="topbar-user">
+          <div class="topbar-user-avatar" id="topbar-avatar">RP</div>
+          <div class="topbar-user-info">
+            <h4 id="topbar-name">Rachel Patel</h4>
+            <span>Super Admin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== DASHBOARD SECTION ======== -->
+    <div class="content-section active" id="section-dashboard">
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 18%</span>
+        </div>
+        <h3>2,847</h3>
+        <p>Total Students</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-icon"><i class="fa-solid fa-book-open"></i></div>
+          <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 6</span>
+        </div>
+        <h3>124</h3>
+        <p>Active Courses</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 24%</span>
+        </div>
+        <h3>₹18.5L</h3>
+        <p>Monthly Revenue</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-icon"><i class="fa-solid fa-percent"></i></div>
+          <span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 3%</span>
+        </div>
+        <h3>87%</h3>
+        <p>Completion Rate</p>
+      </div>
+    </div>
+
+    <!-- Mid Grid: Revenue Chart + Course Performance -->
+    <div class="dashboard-grid">
+
+      <!-- Revenue Chart -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Revenue Overview</h3>
+          <span class="card-link">This Year</span>
+        </div>
+        <div class="chart-placeholder">
+          <div class="chart-bar" style="height:40%; background: linear-gradient(180deg, #00BCD4, #006068);">
+            <span class="bar-label">Jan</span>
+            <span class="bar-value">₹8.2L</span>
+          </div>
+          <div class="chart-bar" style="height:55%; background: linear-gradient(180deg, #00BCD4, #006068);">
+            <span class="bar-label">Feb</span>
+            <span class="bar-value">₹10.5L</span>
+          </div>
+          <div class="chart-bar" style="height:45%; background: linear-gradient(180deg, #00BCD4, #006068);">
+            <span class="bar-label">Mar</span>
+            <span class="bar-value">₹9.1L</span>
+          </div>
+          <div class="chart-bar" style="height:70%; background: linear-gradient(180deg, #8b5cf6, #5b21b6);">
+            <span class="bar-label">Apr</span>
+            <span class="bar-value">₹14.3L</span>
+          </div>
+          <div class="chart-bar" style="height:90%; background: linear-gradient(180deg, #8b5cf6, #5b21b6);">
+            <span class="bar-label">May</span>
+            <span class="bar-value">₹18.5L</span>
+          </div>
+          <div class="chart-bar" style="height:60%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Jun</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:50%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Jul</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:65%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Aug</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:75%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Sep</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:85%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Oct</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:70%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Nov</span>
+            <span class="bar-value">Est.</span>
+          </div>
+          <div class="chart-bar" style="height:95%; background: linear-gradient(180deg, #00BCD4, #006068); opacity:0.4;">
+            <span class="bar-label">Dec</span>
+            <span class="bar-value">Est.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Courses Performance -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Top Courses</h3>
+          <a href="404.html">Manage</a>
+        </div>
+        <div class="course-perf-list">
+
+          <div class="course-perf-item">
+            <div class="course-perf-icon cp-teal"><i class="fa-brands fa-react"></i></div>
+            <div class="course-perf-info">
+              <h4>React.js Complete Guide</h4>
+              <div class="course-perf-bar"><div class="course-perf-fill teal" style="width:92%"></div></div>
+            </div>
+            <span class="course-perf-stat">438</span>
+          </div>
+
+          <div class="course-perf-item">
+            <div class="course-perf-icon cp-purple"><i class="fa-brands fa-python"></i></div>
+            <div class="course-perf-info">
+              <h4>Python for Data Science</h4>
+              <div class="course-perf-bar"><div class="course-perf-fill purple" style="width:85%"></div></div>
+            </div>
+            <span class="course-perf-stat">371</span>
+          </div>
+
+          <div class="course-perf-item">
+            <div class="course-perf-icon cp-amber"><i class="fa-solid fa-pen-ruler"></i></div>
+            <div class="course-perf-info">
+              <h4>UI/UX Design Mastery</h4>
+              <div class="course-perf-bar"><div class="course-perf-fill amber" style="width:74%"></div></div>
+            </div>
+            <span class="course-perf-stat">296</span>
+          </div>
+
+          <div class="course-perf-item">
+            <div class="course-perf-icon cp-green"><i class="fa-brands fa-aws"></i></div>
+            <div class="course-perf-info">
+              <h4>Cloud Computing (AWS)</h4>
+              <div class="course-perf-bar"><div class="course-perf-fill green" style="width:68%"></div></div>
+            </div>
+            <span class="course-perf-stat">254</span>
+          </div>
+
+          <div class="course-perf-item">
+            <div class="course-perf-icon cp-red"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="course-perf-info">
+              <h4>Cybersecurity Essentials</h4>
+              <div class="course-perf-bar"><div class="course-perf-fill red" style="width:56%"></div></div>
+            </div>
+            <span class="course-perf-stat">198</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Enrollments Table -->
+    <div class="card" style="margin-bottom: 30px;">
+      <div class="card-header">
+        <h3>Recent Enrollments</h3>
+        <a href="404.html">Export CSV</a>
+      </div>
+      <table class="enrollments-table">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Date</th>
+            <th>Payment</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av1">MK</div>
+                <span>Meera Kapoor</span>
+              </div>
+            </td>
+            <td>React.js Complete Guide</td>
+            <td>May 26, 2026</td>
+            <td>₹4,999</td>
+            <td><span class="status-badge active">Active</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av2">RN</div>
+                <span>Raj Narayan</span>
+              </div>
+            </td>
+            <td>Python for Data Science</td>
+            <td>May 25, 2026</td>
+            <td>₹5,499</td>
+            <td><span class="status-badge active">Active</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av3">PA</div>
+                <span>Priya Agarwal</span>
+              </div>
+            </td>
+            <td>UI/UX Design Mastery</td>
+            <td>May 25, 2026</td>
+            <td>₹3,999</td>
+            <td><span class="status-badge pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av4">AS</div>
+                <span>Arjun Sharma</span>
+              </div>
+            </td>
+            <td>Cloud Computing (AWS)</td>
+            <td>May 24, 2026</td>
+            <td>₹6,999</td>
+            <td><span class="status-badge active">Active</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av5">NB</div>
+                <span>Neha Banerjee</span>
+              </div>
+            </td>
+            <td>Cybersecurity Essentials</td>
+            <td>May 24, 2026</td>
+            <td>₹4,499</td>
+            <td><span class="status-badge completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="student-cell">
+                <div class="student-avatar av6">VR</div>
+                <span>Vikram Reddy</span>
+              </div>
+            </td>
+            <td>React.js Complete Guide</td>
+            <td>May 23, 2026</td>
+            <td>₹4,999</td>
+            <td><span class="status-badge active">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom Grid: Instructors + Quick Actions -->
+    <div class="bottom-grid">
+
+      <!-- Top Instructors -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Top Instructors</h3>
+          <a href="404.html">View All</a>
+        </div>
+        <div class="instructor-list">
+
+          <div class="instructor-item">
+            <img src="assets/edu_img_9.webp" alt="Dr. Sarah Miller" class="instructor-avatar">
+            <div class="instructor-info">
+              <h4>Dr. Sarah Miller</h4>
+              <p>React.js, JavaScript – 438 students</p>
+            </div>
+            <div class="instructor-rating">
+              <i class="fa-solid fa-star"></i> 4.9
+            </div>
+          </div>
+
+          <div class="instructor-item">
+            <img src="assets/edu_img_10.webp" alt="Prof. James Lee" class="instructor-avatar">
+            <div class="instructor-info">
+              <h4>Prof. James Lee</h4>
+              <p>Python, Machine Learning – 371 students</p>
+            </div>
+            <div class="instructor-rating">
+              <i class="fa-solid fa-star"></i> 4.8
+            </div>
+          </div>
+
+          <div class="instructor-item">
+            <img src="assets/edu_img_11.webp" alt="Emily Chen" class="instructor-avatar">
+            <div class="instructor-info">
+              <h4>Emily Chen</h4>
+              <p>UI/UX, Figma, Design Systems – 296 students</p>
+            </div>
+            <div class="instructor-rating">
+              <i class="fa-solid fa-star"></i> 4.9
+            </div>
+          </div>
+
+          <div class="instructor-item">
+            <img src="assets/edu_img_12.webp" alt="David Park" class="instructor-avatar">
+            <div class="instructor-info">
+              <h4>David Park</h4>
+              <p>AWS, DevOps, Cloud – 254 students</p>
+            </div>
+            <div class="instructor-rating">
+              <i class="fa-solid fa-star"></i> 4.7
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Quick Actions</h3>
+        </div>
+        <div class="quick-actions">
+          <a href="404.html" class="quick-action-btn">
+            <div class="quick-action-icon qa-teal"><i class="fa-solid fa-plus"></i></div>
+            <span>Add New Course</span>
+          </a>
+          <a href="404.html" class="quick-action-btn">
+            <div class="quick-action-icon qa-purple"><i class="fa-solid fa-user-plus"></i></div>
+            <span>Add Instructor</span>
+          </a>
+          <a href="404.html" class="quick-action-btn">
+            <div class="quick-action-icon qa-amber"><i class="fa-solid fa-bullhorn"></i></div>
+            <span>Send Announcement</span>
+          </a>
+          <a href="404.html" class="quick-action-btn">
+            <div class="quick-action-icon qa-green"><i class="fa-solid fa-file-export"></i></div>
+            <span>Generate Report</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    </div><!-- end section-dashboard -->
+
+    <!-- ======== STUDENTS SECTION ======== -->
+    <div class="content-section" id="section-students">
+      <div class="card" style="margin-bottom:30px;">
+        <div class="card-header"><h3>All Students</h3><span class="card-link">2,847 Total</span></div>
+        <table class="enrollments-table">
+          <thead><tr><th>Student</th><th>Email</th><th>Enrolled Courses</th><th>Joined</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><div class="student-cell"><div class="student-avatar av1">MK</div><span>Meera Kapoor</span></div></td><td>meera.k@email.com</td><td>3</td><td>Jan 15, 2026</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av2">RN</div><span>Raj Narayan</span></div></td><td>raj.n@email.com</td><td>2</td><td>Feb 08, 2026</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av3">PA</div><span>Priya Agarwal</span></div></td><td>priya.a@email.com</td><td>1</td><td>Mar 12, 2026</td><td><span class="status-badge pending">Pending</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av4">AS</div><span>Arjun Sharma</span></div></td><td>arjun.s@email.com</td><td>4</td><td>Apr 01, 2026</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av5">NB</div><span>Neha Banerjee</span></div></td><td>neha.b@email.com</td><td>2</td><td>Apr 20, 2026</td><td><span class="status-badge completed">Completed</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av6">VR</div><span>Vikram Reddy</span></div></td><td>vikram.r@email.com</td><td>1</td><td>May 10, 2026</td><td><span class="status-badge active">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 18%</span></div><h3>2,847</h3><p>Total Students</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-user-check"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 12%</span></div><h3>2,340</h3><p>Active Students</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-user-plus"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 24</span></div><h3>156</h3><p>New This Month</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-user-clock"></i></div></div><h3>351</h3><p>Inactive Students</p></div>
+      </div>
+    </div>
+
+    <!-- ======== INSTRUCTORS SECTION ======== -->
+    <div class="content-section" id="section-instructors">
+      <div class="card" style="margin-bottom:30px;">
+        <div class="card-header"><h3>All Instructors</h3><span class="card-link">18 Total</span></div>
+        <table class="enrollments-table">
+          <thead><tr><th>Instructor</th><th>Specialization</th><th>Courses</th><th>Students</th><th>Rating</th></tr></thead>
+          <tbody>
+            <tr><td><div class="student-cell"><div class="student-avatar av1">SM</div><span>Dr. Sarah Miller</span></div></td><td>React.js, JavaScript</td><td>4</td><td>438</td><td><span style="color:#f59e0b;"><i class="fa-solid fa-star"></i></span> 4.9</td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av2">JL</div><span>Prof. James Lee</span></div></td><td>Python, Machine Learning</td><td>3</td><td>371</td><td><span style="color:#f59e0b;"><i class="fa-solid fa-star"></i></span> 4.8</td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av3">EC</div><span>Emily Chen</span></div></td><td>UI/UX, Figma</td><td>2</td><td>296</td><td><span style="color:#f59e0b;"><i class="fa-solid fa-star"></i></span> 4.9</td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av4">DP</div><span>David Park</span></div></td><td>AWS, DevOps, Cloud</td><td>3</td><td>254</td><td><span style="color:#f59e0b;"><i class="fa-solid fa-star"></i></span> 4.7</td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar av5">KR</div><span>Dr. Kavitha Rajan</span></div></td><td>Cybersecurity, Networking</td><td>2</td><td>198</td><td><span style="color:#f59e0b;"><i class="fa-solid fa-star"></i></span> 4.6</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-chalkboard-user"></i></div></div><h3>18</h3><p>Total Instructors</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-star"></i></div></div><h3>4.8</h3><p>Avg. Rating</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-book-open"></i></div></div><h3>3.2</h3><p>Avg. Courses Each</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-users"></i></div></div><h3>158</h3><p>Avg. Students Each</p></div>
+      </div>
+    </div>
+
+    <!-- ======== COURSES SECTION ======== -->
+    <div class="content-section" id="section-courses">
+      <div class="card" style="margin-bottom:30px;">
+        <div class="card-header"><h3>All Courses</h3><span class="card-link">124 Active</span></div>
+        <table class="enrollments-table">
+          <thead><tr><th>Course Name</th><th>Instructor</th><th>Category</th><th>Enrolled</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>React.js Complete Guide 2026</td><td>Dr. Sarah Miller</td><td>Web Development</td><td>438</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Python for Data Science & ML</td><td>Prof. James Lee</td><td>Data Science</td><td>371</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>UI/UX Design Mastery</td><td>Emily Chen</td><td>Design</td><td>296</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Cloud Computing with AWS</td><td>David Park</td><td>Cloud & DevOps</td><td>254</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Cybersecurity Essentials</td><td>Dr. Kavitha Rajan</td><td>Security</td><td>198</td><td><span class="status-badge active">Active</span></td></tr>
+            <tr><td>Full-Stack Node.js Bootcamp</td><td>Dr. Sarah Miller</td><td>Web Development</td><td>182</td><td><span class="status-badge pending">Draft</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-book"></i></div></div><h3>124</h3><p>Active Courses</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-file-pen"></i></div></div><h3>12</h3><p>Draft Courses</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div></div><h3>87%</h3><p>Completion Rate</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-ranking-star"></i></div></div><h3>4.7</h3><p>Avg. Course Rating</p></div>
+      </div>
+    </div>
+
+    <!-- ======== ANALYTICS SECTION ======== -->
+    <div class="content-section" id="section-analytics">
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-eye"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 32%</span></div><h3>45,280</h3><p>Page Views (This Month)</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-clock"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 15%</span></div><h3>28 min</h3><p>Avg. Session Duration</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-user-plus"></i></div><span class="stat-trend up"><i class="fa-solid fa-arrow-up"></i> 22%</span></div><h3>156</h3><p>New Signups (May)</p></div>
+        <div class="stat-card"><div class="stat-card-header"><div class="stat-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div></div><h3>4.2%</h3><p>Bounce Rate</p></div>
+      </div>
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-header"><h3>Enrollment Trends</h3><span class="card-link">Last 6 Months</span></div>
+          <div class="chart-placeholder">
+            <div class="chart-bar" style="height:35%; background: linear-gradient(180deg, #00BCD4, #006068);"><span class="bar-label">Dec</span><span class="bar-value">102</span></div>
+            <div class="chart-bar" style="height:50%; background: linear-gradient(180deg, #00BCD4, #006068);"><span class="bar-label">Jan</span><span class="bar-value">138</span></div>
+            <div class="chart-bar" style="height:42%; background: linear-gradient(180deg, #00BCD4, #006068);"><span class="bar-label">Feb</span><span class="bar-value">118</span></div>
+            <div class="chart-bar" style="height:60%; background: linear-gradient(180deg, #8b5cf6, #5b21b6);"><span class="bar-label">Mar</span><span class="bar-value">164</span></div>
+            <div class="chart-bar" style="height:55%; background: linear-gradient(180deg, #8b5cf6, #5b21b6);"><span class="bar-label">Apr</span><span class="bar-value">148</span></div>
+            <div class="chart-bar" style="height:75%; background: linear-gradient(180deg, #00BCD4, #006068);"><span class="bar-label">May</span><span class="bar-value">156</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Popular Categories</h3></div>
+          <div class="course-perf-list">
+            <div class="course-perf-item"><div class="course-perf-icon cp-teal"><i class="fa-solid fa-code"></i></div><div class="course-perf-info"><h4>Web Development</h4><div class="course-perf-bar"><div class="course-perf-fill teal" style="width:88%"></div></div></div><span class="course-perf-stat">620</span></div>
+            <div class="course-perf-item"><div class="course-perf-icon cp-purple"><i class="fa-solid fa-database"></i></div><div class="course-perf-info"><h4>Data Science</h4><div class="course-perf-bar"><div class="course-perf-fill purple" style="width:72%"></div></div></div><span class="course-perf-stat">505</span></div>
+            <div class="course-perf-item"><div class="course-perf-icon cp-amber"><i class="fa-solid fa-palette"></i></div><div class="course-perf-info"><h4>Design</h4><div class="course-perf-bar"><div class="course-perf-fill amber" style="width:58%"></div></div></div><span class="course-perf-stat">410</span></div>
+            <div class="course-perf-item"><div class="course-perf-icon cp-green"><i class="fa-solid fa-cloud"></i></div><div class="course-perf-info"><h4>Cloud & DevOps</h4><div class="course-perf-bar"><div class="course-perf-fill green" style="width:50%"></div></div></div><span class="course-perf-stat">350</span></div>
+            <div class="course-perf-item"><div class="course-perf-icon cp-red"><i class="fa-solid fa-lock"></i></div><div class="course-perf-info"><h4>Cybersecurity</h4><div class="course-perf-bar"><div class="course-perf-fill red" style="width:38%"></div></div></div><span class="course-perf-stat">265</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== SETTINGS SECTION ======== -->
+    <div class="content-section" id="section-settings">
+      <div class="dashboard-grid">
+        <div class="card">
+          <div class="card-header"><h3>Platform Settings</h3></div>
+          <div class="settings-list">
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-globe"></i></div><div class="settings-info"><h4>Site Name</h4><p>Stackly Academy</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-envelope"></i></div><div class="settings-info"><h4>Support Email</h4><p>support@stacklyacademy.com</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-language"></i></div><div class="settings-info"><h4>Default Language</h4><p>English</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div><div class="settings-info"><h4>Currency</h4><p>INR (₹)</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-clock"></i></div><div class="settings-info"><h4>Timezone</h4><p>Asia/Kolkata (IST)</p></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><h3>Security & Access</h3></div>
+          <div class="settings-list">
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="settings-info"><h4>Two-Factor Authentication</h4><p>Enabled for all admin accounts</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-user-shield"></i></div><div class="settings-info"><h4>Admin Accounts</h4><p>3 active administrators</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-key"></i></div><div class="settings-info"><h4>Password Policy</h4><p>Minimum 8 characters, mixed case + symbol</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-database"></i></div><div class="settings-info"><h4>Data Backup</h4><p>Last backup: May 27, 2026 – 02:00 AM</p></div></div>
+            <div class="settings-item"><div class="settings-icon"><i class="fa-solid fa-file-contract"></i></div><div class="settings-info"><h4>Terms & Privacy</h4><p>Last updated: May 01, 2026</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Mobile sidebar toggle
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const menuBtn = document.getElementById('mobileMenuBtn');
+
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('active');
+      });
+    }
+    
+    const sidebarClose = document.getElementById('sidebarClose');
+    if (sidebarClose) {
+      sidebarClose.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+      });
+    }
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+      });
+    }
+
+    // Section switching
+    const storedName = localStorage.getItem('username') || 'Admin';
+    const initials = storedName.substring(0, 2).toUpperCase();
+    
+    document.getElementById('topbar-name').textContent = storedName;
+    document.getElementById('topbar-avatar').textContent = initials;
+    
+    // Update default welcome text
+    document.getElementById('page-title').textContent = `Welcome back, ${storedName}! 👋`;
+
+    const titles = {
+      dashboard: [`Welcome back, ${storedName}! 👋`, 'Platform overview and management tools'],
+      students: ['Students', 'Manage and monitor all enrolled students'],
+      instructors: ['Instructors', 'View and manage instructor profiles'],
+      courses: ['Courses', 'Browse and manage all platform courses'],
+      analytics: ['Analytics', 'Platform performance and engagement metrics'],
+      settings: ['Settings', 'Configure platform preferences and security']
+    };
+    document.querySelectorAll('.sidebar-nav a[data-section]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const section = link.dataset.section;
+        document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+        document.getElementById('section-' + section).classList.add('active');
+        document.getElementById('page-title').textContent = titles[section][0];
+        document.getElementById('page-subtitle').textContent = titles[section][1];
+        // close mobile sidebar
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

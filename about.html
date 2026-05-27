@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="about.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
 
 <div id="navbar"></div>
 
-<section class="cover-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/cyber.webp'); background-size: cover; background-position: center;">
+<section class="cover-hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/about-hero.webp'); background-size: cover; background-position: center;">
   <div class="cover-content">
     <h1>About Stackly Academy</h1>
     <p>Learn, Grow, and Transform Your Future</p>
@@ -24,20 +25,29 @@
 <section class="about-section">
   <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
 
-    <div class="stats">
-      <div data-aos="zoom-in" data-aos-delay="200">
-        <h2>10K+</h2>
-        <p>Students</p>
+    <div class="stats" id="counter-section">
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fa-solid fa-users stat-icon"></i>
+        <h2 class="counter" data-target="10" data-suffix="K+">0</h2>
+        <p>Active Students</p>
       </div>
 
-      <div data-aos="zoom-in" data-aos-delay="400">
-        <h2>120+</h2>
-        <p>Courses</p>
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fa-solid fa-book-open stat-icon"></i>
+        <h2 class="counter" data-target="120" data-suffix="+">0</h2>
+        <p>Top Courses</p>
       </div>
 
-      <div data-aos="zoom-in" data-aos-delay="600">
-        <h2>50+</h2>
-        <p>Mentors</p>
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="600">
+        <i class="fa-solid fa-chalkboard-user stat-icon"></i>
+        <h2 class="counter" data-target="50" data-suffix="+">0</h2>
+        <p>Expert Mentors</p>
+      </div>
+
+      <div class="stat-box" data-aos="zoom-in" data-aos-delay="800">
+        <i class="fa-solid fa-globe stat-icon"></i>
+        <h2 class="counter" data-target="15" data-suffix="+">0</h2>
+        <p>Countries Reached</p>
       </div>
     </div>
   </div>
@@ -85,20 +95,131 @@
   <h2 data-aos="fade-up">Meet Our Experts</h2>
   <div class="team-grid">
     <div class="team-member" data-aos="flip-up" data-aos-delay="200">
-      <img src="assets/k1.webp" alt="John">
+      <img src="assets/instructor-1.webp" alt="John">
       <h4>Dr. John Doe</h4>
       <p>Chief Academic Officer</p>
     </div>
     <div class="team-member" data-aos="flip-up" data-aos-delay="400">
-      <img src="assets/k3.webp" alt="Jane">
+      <img src="assets/instructor-2.webp" alt="Jane">
       <h4>Jane Smith</h4>
       <p>Head of Engineering</p>
     </div>
     <div class="team-member" data-aos="flip-up" data-aos-delay="600">
-      <img src="assets/cybero1.webp" alt="Robert">
+      <img src="assets/instructor-3.webp" alt="Robert">
       <h4>Robert Chen</h4>
       <p>Lead AI Instructor</p>
     </div>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="our-story">
+  <div class="story-grid">
+    <div class="story-image" data-aos="fade-right" data-aos-duration="1000">
+      <img src="assets/about-learning.webp" alt="Stackly Academy campus">
+      <div class="story-badge">
+        <span class="story-badge-num">5+</span>
+        <span>Years of Excellence</span>
+      </div>
+    </div>
+    <div class="story-text" data-aos="fade-left" data-aos-duration="1000">
+      <span class="story-tag">OUR STORY</span>
+      <h2>From a Small Idea to a Global Platform</h2>
+      <p>Stackly Academy was born in a small co-working space in 2020, when our founders saw a gap between academic education and the skills the industry actually demands. What started as weekend bootcamps for a handful of aspiring developers has grown into a full-fledged, AI-powered learning ecosystem serving thousands of students across continents.</p>
+      <p>Today, we partner with leading tech companies to design curricula, deliver hands-on labs, and provide direct placement pipelines — all while keeping education affordable and accessible to everyone.</p>
+      <div class="story-highlights">
+        <div class="story-hl">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <div><strong>95%</strong><span>Completion Rate</span></div>
+        </div>
+        <div class="story-hl">
+          <i class="fa-solid fa-briefcase"></i>
+          <div><strong>82%</strong><span>Placed Within 90 Days</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section class="core-values">
+  <h2 data-aos="fade-up">What We Stand For</h2>
+  <p class="values-sub" data-aos="fade-up" data-aos-delay="100">The principles that guide everything we build</p>
+  <div class="values-grid">
+    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <h3>Innovation First</h3>
+      <p>We constantly evolve our platform with cutting-edge tools, AI tutoring, and adaptive learning paths that keep students ahead of trends.</p>
+    </div>
+    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      <h3>Student-Centric</h3>
+      <p>Every decision — from course design to pricing — starts with one question: "Does this make learning better for our students?"</p>
+    </div>
+    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="value-icon"><i class="fa-solid fa-earth-americas"></i></div>
+      <h3>Inclusive Access</h3>
+      <p>We believe talent is everywhere but opportunity isn't. Our scholarship programs and flexible pricing ensure no one is left behind.</p>
+    </div>
+    <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="value-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+      <h3>Continuous Growth</h3>
+      <p>Learning never stops. We foster a culture where mentors and students alike push their boundaries and grow together every day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Student Success Stories -->
+<section class="success-stories">
+  <h2 data-aos="fade-up">Success Stories</h2>
+  <p class="stories-sub" data-aos="fade-up" data-aos-delay="100">Real transformations from our community</p>
+  <div class="stories-grid">
+
+    <div class="story-card" data-aos="zoom-in-up" data-aos-delay="100">
+      <div class="story-card-header">
+        <img src="assets/edu_img_3.webp" alt="Priya Sharma">
+        <div>
+          <h4>Priya Sharma</h4>
+          <span>Full-Stack Developer at Flipkart</span>
+        </div>
+      </div>
+      <p>"I went from a non-tech background to landing my dream role in just 5 months. The project-based approach gave me a portfolio that stood out in every interview."</p>
+      <div class="story-card-stats">
+        <div><strong>₹12 LPA</strong><span>First Offer</span></div>
+        <div><strong>5 Months</strong><span>From Enrollment</span></div>
+      </div>
+    </div>
+
+    <div class="story-card" data-aos="zoom-in-up" data-aos-delay="200">
+      <div class="story-card-header">
+        <img src="assets/edu_img_4.webp" alt="Arjun Mehta">
+        <div>
+          <h4>Arjun Mehta</h4>
+          <span>Cloud Engineer at AWS</span>
+        </div>
+      </div>
+      <p>"The DevOps course was incredibly practical. I earned two AWS certifications during the program and had three offers before graduation day."</p>
+      <div class="story-card-stats">
+        <div><strong>2 Certs</strong><span>AWS Certified</span></div>
+        <div><strong>3 Offers</strong><span>Before Graduation</span></div>
+      </div>
+    </div>
+
+    <div class="story-card" data-aos="zoom-in-up" data-aos-delay="300">
+      <div class="story-card-header">
+        <img src="assets/edu_img_1.webp" alt="Neha Patel">
+        <div>
+          <h4>Neha Patel</h4>
+          <span>Data Scientist at Deloitte</span>
+        </div>
+      </div>
+      <p>"The mentors didn't just teach — they challenged me. The capstone project I built with real datasets is still something I showcase to clients."</p>
+      <div class="story-card-stats">
+        <div><strong>₹18 LPA</strong><span>Current CTC</span></div>
+        <div><strong>Top 5%</strong><span>Of Batch</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -143,6 +264,44 @@ fetch("footer.html")
     once: true,
     offset: 100,
   });
+
+  // Counter Animation Script
+  const counters = document.querySelectorAll('.counter');
+  let animationStarted = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix');
+      // Set the speed: adjust denominator to make it faster or slower
+      const increment = target / 40; 
+      
+      let current = 0;
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counter.innerText = Math.ceil(current) + suffix;
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+      
+      updateCounter();
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !animationStarted) {
+      animationStarted = true;
+      animateCounters();
+    }
+  }, { threshold: 0.5 });
+
+  const statsSection = document.getElementById('counter-section');
+  if (statsSection) {
+    observer.observe(statsSection);
+  }
 </script>
 
 </body>

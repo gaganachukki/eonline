@@ -7,7 +7,7 @@
   background-position:center;
   background-attachment:fixed;
   position:relative;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .cover-content{
@@ -34,13 +34,13 @@
   justify-content:center;
   align-items:center;
   background:#f4f7ff;
-  padding:100px 8%;
+  padding:60px 8%;
 }
 
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
   max-width: 1200px;
   width: 100%;
 }
@@ -169,8 +169,8 @@ button:hover {
 
 /* Social Media Section */
 .social-media {
-  padding: 80px 8%;
-  background: #f4f7ff;
+  padding: 60px 8%;
+  background: #0f172a;
   text-align: center;
 }
 
@@ -182,12 +182,12 @@ button:hover {
 .social-content h2 {
   font-size: 35px;
   margin-bottom: 20px;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .social-content p {
   font-size: 18px;
-  color: #666;
+  color: #b0b0b0;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -223,15 +223,38 @@ button:hover {
 @media (max-width: 768px) {
   .cover-hero {
     padding: 100px 5% 30px;
+    background-attachment: scroll;
   }
   .cover-content h1 {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  .cover-content p {
+    font-size: 16px;
+  }
+  .contact {
+    padding: 40px 5%;
   }
   .contact-container {
     flex-direction: column;
   }
   .contact-info h2, .contact-box h1 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+  .contact-box {
+    padding: 25px 20px;
+  }
+  input, textarea, button {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .social-media {
+    padding: 40px 5%;
+  }
+  .social-content h2 {
+    font-size: 28px;
+  }
+  .social-content p {
+    font-size: 15px;
   }
   .social-links {
     flex-wrap: wrap;

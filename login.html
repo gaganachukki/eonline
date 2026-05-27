@@ -3,33 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-
+  <title>Stackly Academy - Sign In</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
 <div class="login-container">
-
   <div class="login-box">
+    <div class="login-header">
+      <h1>Stackly Academy</h1>
+      <p>Welcome back! Please sign in.</p>
+    </div>
 
-    <h1>Welcome Back</h1>
+    <form id="loginForm">
+      <select id="role" required>
+        <option value="" disabled selected hidden>Select Role</option>
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+      </select>
 
-    <form>
+      <input type="email" id="email" placeholder="Email Address" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" title="Please enter a full email ID (e.g. example@gmail.com)">
 
-      <input type="email" placeholder="Email Address">
+      <div class="password-wrap">
+        <input type="password" id="password" placeholder="Password" required minlength="6" title="Password must be at least 6 characters">
+        <i class="fa-solid fa-eye-slash toggle-password"></i>
+      </div>
 
-      <input type="password" placeholder="Password">
+      <div class="remember-forgot">
+        <label class="remember-me">
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="404.html" class="forgot-password">Forgot Password?</a>
+      </div>
 
-      <button type="submit">Login</button>
-
+      <button type="submit" class="signin-btn">Sign In</button>
     </form>
 
-    <p>Don't have an account? <a href="#">Register</a></p>
+    <div class="social-section">
+      <p>Or sign in with</p>
+      <div class="social-icons">
+        <a href="404.html" class="social-btn"><i class="fa-brands fa-google"></i></a>
+        <a href="404.html" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
 
+    <p class="signup-link">New to Stackly Academy? <a href="register.html">Sign Up</a></p>
   </div>
-
 </div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const role = document.getElementById('role').value;
+    const email = document.getElementById('email').value;
+    
+    if (email) {
+      const username = email.split('@')[0];
+      const capitalized = username.charAt(0).toUpperCase() + username.slice(1);
+      localStorage.setItem('username', capitalized);
+    }
+
+    if (role === 'student') {
+      window.location.href = 'studentdashboard.html';
+    } else if (role === 'admin') {
+      window.location.href = 'admindashboard.html';
+    } else {
+      alert('Please select a role.');
+    }
+  });
+
+  document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', function() {
+      const input = this.previousElementSibling;
+      if (input.type === 'password') {
+        input.type = 'text';
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-eye');
+      } else {
+        input.type = 'password';
+        this.classList.remove('fa-eye');
+        this.classList.add('fa-eye-slash');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
