@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('assets/hero-1.webp') center/cover no-repeat;
+              url('assets/cybero1.webp') center/cover no-repeat;
 }
 
 .login-container {
@@ -25,24 +25,24 @@ body {
 .login-box {
   background: #0f1923;
   border-radius: 12px;
-  padding: 30px 25px;
+  padding: 25px 20px;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .login-header {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .login-header h1 {
   color: #00BCD4;
-  font-size: 28px;
-  margin-bottom: 5px;
+  font-size: 26px;
+  margin-bottom: 3px;
 }
 
 .login-header p {
@@ -113,7 +113,7 @@ input:focus, select:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .remember-me {
@@ -147,11 +147,11 @@ input:focus, select:focus {
   color: black;
   border: none;
   border-radius: 6px;
-  padding: 12px;
-  font-size: 16px;
+  padding: 11px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 2px;
   transition: all 0.3s ease;
 }
 
@@ -161,13 +161,13 @@ input:focus, select:focus {
 
 .social-section {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .social-section p {
   color: #888888;
-  font-size: 13px;
-  margin-bottom: 15px;
+  font-size: 12px;
+  margin-bottom: 12px;
 }
 
 .social-icons {
@@ -198,8 +198,9 @@ input:focus, select:focus {
 .signup-link {
   text-align: center;
   color: #888888;
-  font-size: 13px;
-  margin-top: 20px;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .signup-link a {
@@ -213,24 +214,46 @@ input:focus, select:focus {
   color: #0097A7;
 }
 
+.go-home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid #00BCD4;
+  color: #00BCD4;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.go-home-btn:hover {
+  background: rgba(0, 188, 212, 0.1);
+  border-color: #0097A7;
+  color: #0097A7;
+}
+
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
     padding: 20px 5%;
   }
   .login-box {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
   .login-header h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   input[type="text"],
   input[type="email"],
   select,
   .password-wrap input,
   .signin-btn {
-    padding: 15px;
-    font-size: 16px;
-    min-height: 48px;
+    padding: 12px;
+    font-size: 14px;
   }
 }

@@ -6,17 +6,18 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('assets/hero-1.webp') center/cover no-repeat;
+              url('assets/cybero1.webp') center/cover no-repeat;
+  overflow: hidden;
 }
 
 .register-container {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,38 +26,38 @@ body {
 .register-box {
   background: #0f1923;
   border-radius: 12px;
-  padding: 30px 25px;
+  padding: 20px 20px;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .register-box h2 {
   color: white;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 input[type="text"],
 input[type="email"],
 select {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: #1a2a3a;
   border: 1px solid #2a3a4a;
   border-radius: 6px;
   color: #cccccc;
-  font-size: 14px;
+  font-size: 13px;
   outline: none;
   transition: all 0.3s ease;
   appearance: none; /* for select */
@@ -76,13 +77,13 @@ select {
 
 .password-wrap input {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   padding-right: 40px;
   background: #1a2a3a;
   border: 1px solid #2a3a4a;
   border-radius: 6px;
   color: #cccccc;
-  font-size: 14px;
+  font-size: 13px;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -120,11 +121,11 @@ input:focus, select:focus {
   color: black;
   border: none;
   border-radius: 6px;
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 2px;
   transition: all 0.3s ease;
 }
 
@@ -134,13 +135,13 @@ input:focus, select:focus {
 
 .social-section {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .social-section p {
   color: #888888;
-  font-size: 13px;
-  margin-bottom: 15px;
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .social-icons {
@@ -171,8 +172,8 @@ input:focus, select:focus {
 .login-link {
   text-align: center;
   color: #888888;
-  font-size: 13px;
-  margin-top: 20px;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
 .login-link a {

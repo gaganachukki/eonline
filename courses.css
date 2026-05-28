@@ -399,7 +399,7 @@
     padding: 40px 5%;
   }
   .category-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .category-box {
     padding: 25px 15px;

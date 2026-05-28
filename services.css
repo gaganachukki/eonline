@@ -82,22 +82,22 @@
 
 /* Unique accent colors for each service box */
 .service:nth-child(1) i { color: #00BCD4; }
-.service:nth-child(2) i { color: #FF6B6B; }
-.service:nth-child(3) i { color: #4CAF50; }
-.service:nth-child(4) i { color: #FF9800; }
-.service:nth-child(5) i { color: #9C27B0; }
-.service:nth-child(6) i { color: #2196F3; }
-.service:nth-child(7) i { color: #E91E63; }
-.service:nth-child(8) i { color: #009688; }
+.service:nth-child(2) i { color: #00BCD4; }
+.service:nth-child(3) i { color: #00BCD4; }
+.service:nth-child(4) i { color: #00BCD4; }
+.service:nth-child(5) i { color: #00BCD4; }
+.service:nth-child(6) i { color: #00BCD4; }
+.service:nth-child(7) i { color: #00BCD4; }
+.service:nth-child(8) i { color: #00BCD4; }
 
 .service:nth-child(1):hover { border-top: 4px solid #00BCD4; }
-.service:nth-child(2):hover { border-top: 4px solid #FF6B6B; }
-.service:nth-child(3):hover { border-top: 4px solid #4CAF50; }
-.service:nth-child(4):hover { border-top: 4px solid #FF9800; }
-.service:nth-child(5):hover { border-top: 4px solid #9C27B0; }
-.service:nth-child(6):hover { border-top: 4px solid #2196F3; }
-.service:nth-child(7):hover { border-top: 4px solid #E91E63; }
-.service:nth-child(8):hover { border-top: 4px solid #009688; }
+.service:nth-child(2):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(3):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(4):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(5):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(6):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(7):hover { border-top: 4px solid #00BCD4; }
+.service:nth-child(8):hover { border-top: 4px solid #00BCD4; }
 
 /* How It Works Section */
 .how-it-works {

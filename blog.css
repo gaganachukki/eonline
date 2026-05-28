@@ -206,6 +206,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .tag-item:hover {
@@ -268,5 +270,51 @@
   .tag-item {
     font-size: 14px;
     padding: 8px 16px;
+  }
+  .featured-article {
+    padding: 40px 5% !important;
+  }
+  .featured-article > div {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .featured-article h2 {
+    font-size: 24px !important;
+  }
+  .featured-article p {
+    font-size: 14px !important;
+  }
+  .editors-picks {
+    padding: 40px 5% !important;
+  }
+  .editors-picks h2 {
+    font-size: 28px !important;
+  }
+  .author-spotlight {
+    padding: 40px 5% !important;
+  }
+  .author-spotlight h2 {
+    font-size: 28px !important;
+  }
+  .author-card {
+    padding: 20px !important;
+  }
+  .author-card h3 {
+    font-size: 16px !important;
+  }
+  .author-card p {
+    font-size: 13px !important;
+  }
+  .categories-filter {
+    padding: 40px 5% !important;
+  }
+  .categories-filter h2 {
+    font-size: 28px !important;
+  }
+  .category-box h3 {
+    font-size: 16px !important;
+  }
+  .category-box p {
+    font-size: 13px !important;
   }
 }
