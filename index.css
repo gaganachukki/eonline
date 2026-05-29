@@ -466,8 +466,17 @@ body{
 
 .partner-logo i {
   font-size: 40px;
-  color: #555;
+  transition: color 0.3s ease;
 }
+
+.partner-logo .fa-google { color: #4285F4; }
+.partner-logo .fa-microsoft { color: #00A4EF; }
+.partner-logo .fa-amazon { color: #FF9900; }
+.partner-logo .fa-meta { color: #1877F2; }
+.partner-logo .fa-apple { color: #000000; }
+.partner-logo .fa-spotify { color: #1DB954; }
+.partner-logo .fa-slack { color: #E01E5A; }
+.partner-logo .fa-stripe { color: #635BFF; }
 
 .partner-logo span {
   font-size: 13px;

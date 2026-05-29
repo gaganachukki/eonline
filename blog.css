@@ -51,15 +51,17 @@
   background:white;
   border-radius:20px;
   overflow:hidden;
-  transition: all 0.4s ease;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .blog-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) translateY(-10px);
+  box-shadow: -10px 15px 40px rgba(0,188,212,0.15), 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .blog-img-wrap {
@@ -215,6 +217,41 @@
   color: #00BCD4;
   border-color: #00BCD4;
   box-shadow: 0 5px 15px rgba(0, 188, 212, 0.2);
+}
+
+/* 3D Hover Effects for All Blog Cards */
+.editors-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.editors-card:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateY(-10px);
+  box-shadow: 10px 15px 40px rgba(0,188,212,0.15), 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.author-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.author-card:hover {
+  transform: perspective(1000px) rotateX(3deg) rotateY(-3deg) translateY(-10px) !important;
+  box-shadow: -8px 12px 35px rgba(0,188,212,0.15), 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+.category-box {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.category-box:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05) !important;
+  box-shadow: 8px 12px 30px rgba(0,188,212,0.2), 0 10px 25px rgba(0,0,0,0.08) !important;
+  border-color: #00BCD4 !important;
 }
 
 @media (max-width: 768px) {

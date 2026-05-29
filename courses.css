@@ -435,3 +435,25 @@
     transform: translateY(-10px);
   }
 }
+
+/* Hover effects for additional cards and buttons */
+.specialization-card:hover,
+.difficulty-card:hover,
+.success-card:hover,
+.batch-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.difficulty-card,
+.success-card,
+.batch-card,
+.batch-card a {
+  transition: all 0.3s ease !important;
+}
+
+.batch-card a:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+  opacity: 0.9;
+}
