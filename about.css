@@ -115,6 +115,7 @@
   padding: 60px 8%;
   background: white;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .vm-box {
@@ -125,13 +126,14 @@
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   border: 2px solid transparent;
+  transform-style: preserve-3d;
 }
 
 .vm-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transform: translateY(-15px) rotateX(10deg) rotateY(-10deg) scale(1.03) !important;
+  box-shadow: 20px 30px 40px rgba(0,188,212,0.15);
   border-color: #00BCD4;
 }
 

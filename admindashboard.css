@@ -210,7 +210,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
   margin-bottom: 35px;
+}
+
+.topbar-left {
+  flex-shrink: 0;
+  min-width: 0;
 }
 
 .topbar-left h1 {
@@ -218,17 +225,20 @@ body {
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .topbar-left p {
   font-size: 14px;
   color: #666666;
+  white-space: nowrap;
 }
 
 .topbar-right {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .topbar-search {
@@ -281,6 +291,7 @@ body {
   transition: all 0.3s ease;
   position: relative;
   perspective: 1000px;
+  text-decoration: none;
 }
 
 .topbar-icon:hover {
@@ -943,10 +954,17 @@ body {
   .mobile-menu-btn {
     display: flex;
   }
+  .topbar-left {
+    flex-shrink: 1;
+  }
   .topbar-left h1 {
     font-size: 22px;
+    white-space: normal;
     word-break: break-word;
     overflow-wrap: break-word;
+  }
+  .topbar-left p {
+    white-space: normal;
   }
   .topbar-user-info {
     display: none;

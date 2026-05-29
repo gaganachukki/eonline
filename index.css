@@ -339,8 +339,11 @@ body{
   }
   .path-line {
     width: 4px;
+    min-width: 4px;
     height: 50px;
     min-height: 50px;
+    flex: none;
+    margin: 10px 0;
   }
   
   .hero {

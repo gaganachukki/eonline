@@ -323,26 +323,26 @@
 /* ========== Tools & Technologies - Flip Cards ========== */
 .tools-section {
   padding: 60px 8%;
-  background: white;
+  background: url('assets/kw.webp') center/cover no-repeat fixed;
   text-align: center;
 }
 
 .tools-section h2 {
   font-size: 45px;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .tools-sub {
   font-size: 18px;
-  color: #666;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 50px;
 }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
